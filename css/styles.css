@@ -1,0 +1,551 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    
+}
+
+:root {
+    --col1: rgb(164, 196, 101);
+    --col2: rgb(77, 139, 233)
+}
+
+body {
+    font-family: Lato, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    border-bottom: 5px solid black;
+}
+
+#navbar {
+    width: 100%;
+    height: 50px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+}
+
+nav > ul > li {
+color: #eeeeee;
+margin: 0 0.2rem;
+padding: 0 1.5rem;
+display: block;
+}
+
+.nav-link, a {
+color: inherit;
+text-decoration: none;
+}
+/*welcome-section*/
+#welcome-section {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1587B3;
+    color: rgb(255, 255, 255);
+    border: 2px solid black;
+}
+
+
+.yoda {
+    width: 650px;
+    height: 600px;
+    margin: auto;
+    margin-top: 75px;
+    z-index: 4;
+    position: relative;
+    transition: transform 1s ease-in-out 0ms;
+}
+.yoda * {
+    position: absolute;
+
+}
+.text {
+    height: 200px;
+    width: 400px;
+    color: white;
+}
+
+.text H1 {
+    top: 15%;
+}
+
+.text p {
+    top: 60%;
+    text-indent: 150px;
+}
+
+/*HEAD*/
+
+.yoda-head {
+    height: 110px;
+    width: 180px;
+    background-color: var(--col1);
+    border-radius: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.eyebrown {
+    height: 25px;
+    width: 65px;
+    background-color: var(--col1);
+    border-radius: 80%;
+    top: 14%;
+    border-top: 1px ridge #000000;
+}
+.eyebrown.left {
+    left: 12%;
+}
+
+.eyebrown.right {
+    right: 8%;
+}
+
+.skin {
+    background-color: var(--col1);
+    top: 4%;
+    z-index: 1;
+}
+.skin.left {
+    height: 95px;
+    width: 105px;
+    border-radius: 5% 80% 15% 99%;
+    left: -55%;
+    transform: rotate(-20deg);
+}
+.skin.right {
+    height: 95px;
+    width: 105px;
+    border-radius: 99% 15% 80% 5%;
+    right: -58%;
+    transform: rotate(20deg);
+}
+
+.ear {
+    top: 10%;
+    z-index: 1;
+}
+.ear.left {
+    height: 75px;
+    width: 85px;
+    background: linear-gradient(to right, var(--col1), var(--col1) 20%, rgb(247, 129, 149) 90%, rgb(241, 102, 125) 100%);
+    border-radius: 5% 80% 15% 99%;
+    left: 10%;
+}
+.ear.right {
+    height: 75px;
+    width: 85px;
+    background: linear-gradient(to left, var(--col1), var(--col1) 20%, rgb(247, 129, 149) 90%, rgb(241, 102, 125) 100%);
+    border-radius: 99% 15% 80% 5%;
+    right: 10%;
+}
+
+.eye {
+    height: 50px;
+    width: 50px;
+    background: radial-gradient(
+        circle at 50% 50%,
+        #000000,
+        #000000b9 50%,
+        #4d2c00 51%,
+        #000000c7 60%,
+        #000000 100%
+      );
+    border-radius: 70% 10%;
+    transform: rotate(45deg);
+    top: 20%; 
+}
+
+.ball {
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+    top: 40%;
+    left: 15%;
+}
+.smallball {
+    height: 3px;
+    width: 3px;
+    background-color: white;
+    border-radius: 50%;
+    top: 35%;
+    left: 82%;
+}
+
+.bochecha {
+    height: 50px;
+    width: 70px;
+    background-color: var(--col1);
+    border-radius: 50%;
+    top: 55%;
+    
+    z-index: -1;
+}
+.bochecha.left {
+    left: 10%;
+}
+.bochecha.right {
+    right: 10%;
+}
+
+.eye.left {
+    left: 17%
+}
+
+.eye.right {
+    right: 13%;
+}
+
+
+.nose {
+    height: 10px;
+    width: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.527);
+    z-index: 4;
+    top: 55%;
+    left: 49%;
+    border-radius: 21% 21% 99% 1%;
+    transform: rotate(225deg);
+
+}
+
+.cheek {
+    height: 35px;
+    width: 50px;
+    background: radial-gradient(circle at 50% 50%, rgba(247, 149, 165, 0.404), rgba(241, 136, 154, 0.404) 10%, transparent 50%, transparent 100%);
+    border-radius: 90% 90% 80% 80%;
+    z-index: 2;
+    top: 60%;
+}
+.cheek.left{
+    left: 10%;
+}
+.cheek.right{
+    right: 10%;
+}
+
+.lip {
+    height: 20px;
+    width: 40px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    top: 68%;
+    left: 41%;
+    z-index: 2;
+}
+
+.mounth {
+    height: 20px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: var(--col1);
+    top: 65%;
+    left: 37%;
+    z-index: 3;
+}
+
+.bottomlip {
+    height: 29px;
+    width: 44px;
+    background-color: var(--col1);
+    border-radius: 35% 35% 40% 40%;
+    top: 78%;
+    left: 40%;
+    z-index: 1;
+}
+
+/*DRESS*/
+.yoda-dress {
+    height: 255px;
+    width: 195px;
+    background-color: #EFE4B0;
+    border-radius: 70% 70% 10% 10% ;
+    border: 1px solid black;
+    z-index: -1;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.hand {
+    height: 35px;
+    width: 45px;
+    border-radius: 20%;
+    background-color: var(--col1);
+    z-index: -1;
+}
+
+.hand.left {
+    top: 97%;
+    left: 15%;
+    transform: rotate(-90deg);
+}
+.finger {
+    height: 15px;
+    width: 60px;
+    border-radius: 90% 40% 20% 90%;
+    background-color: var(--col1);
+}
+.finger.one {
+    top: -8%;
+    left: -70%;
+    transform: rotate(10deg);
+}
+.nailone {
+    height: 5px;
+    width: 15px;
+    border-radius: 90% 40% 20% 90%;
+    background-color: palevioletred; 
+}
+.finger.two {
+    top: 60%;
+    left: -45%;
+    transform: rotate(-25deg);
+}
+.nailtwo {
+    height: 10px;
+    width: 15px;
+    border-radius: 90% 40% 20% 90%;
+    background-color: palevioletred;
+    top: 15%;
+}
+.finger.three {
+    top: 35%;
+    left: -55%;
+    background-color: rgb(149, 194, 78);
+    z-index: -2;
+}
+
+.hand.right {
+    top: 97%;
+    right: 10%;
+    transform: rotate(-90deg);
+}
+.finger.two.right{
+    top: -5%;
+    left: -50%;
+    transform: rotate(25deg);
+}
+.finger.one.right{
+    top: 75%;
+    left: -70%;
+    transform: rotate(-15deg);
+}
+.nailoneright {
+    height: 5px;
+    width: 15px;
+    border-radius: 90% 40% 20% 90%;
+    background-color: palevioletred;
+    top: 50%;
+}
+
+.scarf {
+    height: 55px;
+    width: 115px;
+    background-color: rgb(185, 155, 109);
+    background-image: url(../images/clothestexture.jpg);
+    top: 1%;
+    border-radius: 40%;
+    border: 1px solid black;
+    z-index: 2;
+}
+
+.scarf.left {
+    left: 38%;
+}
+
+.scarf.right {
+    right: 38%;
+}
+
+.arm {
+    height: 105px;
+    width: 55px;
+    background-color: #EFE4B0;
+    border-radius: 20% 20% 30% 30% ;
+    top: 10%;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.sleeve {
+    height: 25px;
+    width: 55px;
+    background-color: rgb(185, 155, 109);
+    background-image: url(../images/clothestexture.jpg);
+    top: 87%;
+    border-radius: 30%;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.arm.right {
+    transform: rotate(-45deg);
+    right: -20%;
+}
+.arm.left {
+    left: -20%;
+    transform: rotate(45deg);
+    animation: 4s linear 3s play;
+}
+/*ANIMATION*/
+
+@keyframes play {
+    10% {
+      transform: rotate(60deg);
+    }
+    20% {
+      transform: rotate(70deg);
+    }
+    30% {
+      transform: rotate(80deg);
+    }
+    90% {
+      transform: rotate(90deg);
+    }
+}
+@keyframes test {
+        from {
+            transform: translateY(0);
+        }
+        to {transform: translateY(-18vh);
+            filter: brightness(75%); 
+        }
+}
+@keyframes face {
+    50% {
+            height: 20px;
+            width: 20px;
+            border-right: 1px solid black;
+            top: 4%;
+            left: 40%;
+    }
+    
+}
+
+
+.bola {
+    background: radial-gradient( rgb(255, 0, 0), rgb(240, 41, 41) 40%, black 100%);
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    aspect-ratio: 1 / 1;
+    animation: 2s linear 5s test;
+}
+
+.power {
+    animation: 5s linear 3s face;
+}
+
+/* GROUND */
+.ground {
+    height: 137px;
+    width: 100%;
+    background-color: rgb(66, 126, 48);
+    background: linear-gradient(rgb(20, 68, 2), rgb(66, 126, 48) 1%, rgb(25, 78, 9) 100%);
+    position: absolute;
+    top: 70vh;
+    z-index: -2;
+}
+
+
+/* PROJECTS */
+
+#projects {
+    padding: 10rem 2rem;
+    height: auto;
+    width: 100vw;
+    background: linear-gradient(rgb(0, 0, 0),#4053af 5%, #2E386C 95%, black 100%);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #eeeeee;
+    
+}
+.project-row {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;  
+    gap: 10px;  
+}
+.project-title {
+    padding-bottom: 20px;
+}
+.project {
+    min-width: 200px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+i {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    
+}
+.project p {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(28, 31, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 10px;
+    min-width: 500px;
+    text-align: center;
+}
+
+#contact {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgb(0, 0, 0),#e47881 5%, #e47881 95%, black 100%);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-link a {
+    text-align: center;
+    padding: 20px;
+}
+
+@media only screen and (max-width:620px){
+    .project-row {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
